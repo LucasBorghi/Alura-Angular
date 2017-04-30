@@ -2,6 +2,9 @@
     <h1 class="text-center">Roitebim</h1>
 </div>
 <div class="container">
-    <app-foto url="./assets/img/leao.jpg" titulo="Leão"></app-foto>
-    <app-foto url="./assets/img/leao-branco.jpg" titulo="Leão Branco"></app-foto>
+    <div class="row">
+        <app-painel *ngFor="let foto of fotos" titulo="{{foto.titulo}}" class="col-md-2">
+            <app-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></app-foto>
+        </app-painel>
+    </div>
 </div>
